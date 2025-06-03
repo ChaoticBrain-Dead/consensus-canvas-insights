@@ -59,7 +59,7 @@ export const ComparisonTable = ({ mechanisms }: Props) => {
   };
 
   return (
-    <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700/50">
+    <Card className="bg-slate-900/60 backdrop-blur-sm border-purple-500/30">
       <CardHeader>
         <CardTitle className="text-white">Detailed Comparison</CardTitle>
       </CardHeader>
@@ -67,9 +67,9 @@ export const ComparisonTable = ({ mechanisms }: Props) => {
         <div className="overflow-x-auto">
           <Table>
             <TableHeader>
-              <TableRow className="border-slate-700/50">
+              <TableRow className="border-purple-500/20">
                 <TableHead 
-                  className="text-slate-300 cursor-pointer hover:text-white"
+                  className="text-slate-300 cursor-pointer hover:text-cyan-400"
                   onClick={() => handleSort("name")}
                 >
                   <div className="flex items-center gap-2">
@@ -78,7 +78,7 @@ export const ComparisonTable = ({ mechanisms }: Props) => {
                   </div>
                 </TableHead>
                 <TableHead 
-                  className="text-slate-300 cursor-pointer hover:text-white"
+                  className="text-slate-300 cursor-pointer hover:text-cyan-400"
                   onClick={() => handleSort("transactionSpeed")}
                 >
                   <div className="flex items-center gap-2">
@@ -87,7 +87,7 @@ export const ComparisonTable = ({ mechanisms }: Props) => {
                   </div>
                 </TableHead>
                 <TableHead 
-                  className="text-slate-300 cursor-pointer hover:text-white"
+                  className="text-slate-300 cursor-pointer hover:text-cyan-400"
                   onClick={() => handleSort("energyEfficiency")}
                 >
                   <div className="flex items-center gap-2">
@@ -96,7 +96,7 @@ export const ComparisonTable = ({ mechanisms }: Props) => {
                   </div>
                 </TableHead>
                 <TableHead 
-                  className="text-slate-300 cursor-pointer hover:text-white"
+                  className="text-slate-300 cursor-pointer hover:text-cyan-400"
                   onClick={() => handleSort("security")}
                 >
                   <div className="flex items-center gap-2">
@@ -105,7 +105,7 @@ export const ComparisonTable = ({ mechanisms }: Props) => {
                   </div>
                 </TableHead>
                 <TableHead 
-                  className="text-slate-300 cursor-pointer hover:text-white"
+                  className="text-slate-300 cursor-pointer hover:text-cyan-400"
                   onClick={() => handleSort("decentralization")}
                 >
                   <div className="flex items-center gap-2">
@@ -119,7 +119,7 @@ export const ComparisonTable = ({ mechanisms }: Props) => {
             </TableHeader>
             <TableBody>
               {sortedMechanisms.map((mechanism) => (
-                <TableRow key={mechanism.id} className="border-slate-700/50 hover:bg-slate-700/20">
+                <TableRow key={mechanism.id} className="border-purple-500/20 hover:bg-purple-900/20">
                   <TableCell>
                     <div className="flex items-center gap-3">
                       <div className={`text-lg p-2 rounded-lg bg-gradient-to-r ${mechanism.color}`}>
@@ -153,19 +153,19 @@ export const ComparisonTable = ({ mechanisms }: Props) => {
                     </div>
                   </TableCell>
                   <TableCell>
-                    <Badge variant="outline" className="capitalize border-slate-600 text-slate-300">
+                    <Badge variant="outline" className="capitalize border-purple-500/50 text-purple-300">
                       {mechanism.category}
                     </Badge>
                   </TableCell>
                   <TableCell>
                     <div className="flex flex-wrap gap-1 max-w-48">
                       {mechanism.examples.slice(0, 2).map((example) => (
-                        <Badge key={example} variant="secondary" className="bg-slate-700/50 text-slate-300 text-xs">
+                        <Badge key={example} variant="secondary" className="bg-purple-900/50 text-purple-200 text-xs">
                           {example}
                         </Badge>
                       ))}
                       {mechanism.examples.length > 2 && (
-                        <Badge variant="outline" className="border-slate-600 text-slate-400 text-xs">
+                        <Badge variant="outline" className="border-purple-500/50 text-purple-300 text-xs">
                           +{mechanism.examples.length - 2}
                         </Badge>
                       )}
